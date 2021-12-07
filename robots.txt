@@ -1,0 +1,3 @@
+User-agent:*
+ Disallow:
+Sitemap: https://nft-criptojuegos.netlify.app/sitemap.xml

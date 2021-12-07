@@ -1,0 +1,102 @@
+/* BLOCKCHAIN */
+
+.body--blockchain {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1280px;
+    background: linear-gradient(359.34deg, #000000 59.23%, #1c1f59 100%);
+  }
+  
+  .main-blockchain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    min-height: 700px;
+  }
+  
+  .main-blockchain__texto {
+    width: 49%;
+  }
+  
+  .main-blockchain__texto__titulo {
+    font-family: var(--Rubik);
+    color: var(--blanco);
+    font-size: 60px;
+  
+    margin: 20px 0;
+  }
+  
+  .main-blockchain__texto__subtitulo {
+    font-family: var(--popins);
+    color: var(--blanco);
+    font-weight: 200;
+  
+    margin: 30px 0;
+    b {
+      color: var(--naranja);
+    }
+  }
+  .main-blockchain__video {
+    width: 48%;
+  }
+  /* ------ Responsive Pagina BLOCKCHAIN ------ */
+  
+  /* --- pantallas Laptops (1024px) --- */
+  @media (max-width: 1024px) {
+    .main-blockchain {
+      margin: 0 50px;
+      margin-top: 100px;
+
+    }
+  }
+  
+  /* --- FIN pantallas Laptops --- */
+  
+  /* --- pantallas Tablets (768px) --- */
+  @media (max-width: 768px) {
+    .main-blockchain {
+      flex-direction: column;
+  
+      margin: 20px 50px;
+      margin-top: 100px;
+
+    }
+  
+    .main-blockchain__texto {
+      width: auto;
+    }
+  
+    .main-blockchain__video {
+      width: 700px;
+    }
+  }
+  
+  /* --- FIN pantallas Tablets --- */
+  
+  /* --- pantalla smartphones (375px) --- */
+  @media (max-width: 375px) {
+    .main-blockchain__texto {
+      width: auto;
+    }
+  
+    .main-blockchain__texto__titulo {
+      font-size: 38px;
+      text-align: center;
+    }
+  
+    .main-blockchain__texto__subtitulo {
+      font-size: 12px;
+      text-align: center;
+  
+      margin: 15px 0;
+    }
+  
+    .main-blockchain__video {
+      width: 330px;
+    }
+  }
+  
+  /* --- FIN pantalla smartphones --- */

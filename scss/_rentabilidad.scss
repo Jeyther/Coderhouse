@@ -1,0 +1,132 @@
+/* --- RENTABILIDAD --- */
+
+.main-Rentabilidad {
+  padding: 40px 0;
+  min-height: 800px;
+
+  display: flex;
+
+  flex-wrap: wrap;
+  align-items: center;
+
+  margin-top: 100px;
+}
+
+.objetos {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: baseline;
+  justify-content: space-between;
+
+  gap: 25px;
+}
+
+.main-Rentabilidad__objeto-1,
+.main-Rentabilidad__objeto-2,
+.main-Rentabilidad__objeto-3,
+.main-Rentabilidad__objeto-4 {
+  font-family: var(--popins);
+  color: white;
+  text-align: center;
+  font-weight: 200;
+
+  width: 300px;
+}
+
+.main-Rentabilidad__objeto-1__img,
+.main-Rentabilidad__objeto-2__img,
+.main-Rentabilidad__objeto-3__img,
+.main-Rentabilidad__objeto-4__img {
+  margin: 10px;
+}
+
+.img-rentabilidad__objeto-1__titulo,
+.img-rentabilidad__objeto-2__titulo,
+.img-rentabilidad__objeto-3__titulo,
+.img-rentabilidad__objeto-4__titulo {
+  font-size: 14px;
+}
+
+.main-Rentabilidad__objeto-1__parrafo,
+.main-Rentabilidad__objeto-2__parrafo,
+.main-Rentabilidad__objeto-3__parrafo,
+.main-Rentabilidad__objeto-4__parrafo {
+  font-size: 14px;
+}
+
+/* ------ ANIMACION DE SLIDE CON EACH Y LIST ------ */
+$animation-delays: 0,400ms,800ms,1200ms;
+@each $delay in $animation-delays {
+
+  .slideLeft-#{$delay} {
+    animation-name: slideLeft;
+    animation-duration: 700ms;	
+    animation-delay: $delay;
+    animation-timing-function: ease-in-out;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+/* ------ FIN ANIMACION DE SLIDE CON EACH Y LIST ------ */
+
+
+/* ------ Responsive Pagina RENTABILIDAD ------ */
+
+/* --- pantallas Laptops (1024px) --- */
+@media (max-width: 1024px) {
+  .main-Rentabilidad__objeto-1,
+  .main-Rentabilidad__objeto-2,
+  .main-Rentabilidad__objeto-3,
+  .main-Rentabilidad__objeto-4 {
+    width: 220px;
+  }
+
+  .main-Rentabilidad__objeto-1__img,
+  .main-Rentabilidad__objeto-2__img,
+  .main-Rentabilidad__objeto-3__img,
+  .main-Rentabilidad__objeto-4__img {
+    width: 100px;
+  }
+
+  .main-Rentabilidad__objeto-1__parrafo,
+  .main-Rentabilidad__objeto-2__parrafo,
+  .main-Rentabilidad__objeto-3__parrafo,
+  .main-Rentabilidad__objeto-4__parrafo {
+    font-size: 12px;
+  }
+}
+
+/* --- FIN pantallas Laptops --- */
+
+/* --- pantallas Tablets (768px) --- */
+@media (max-width: 768px) {
+  .main-Rentabilidad {
+    margin-top: 100px;
+  }
+
+  .objetos {
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .main-Rentabilidad__objeto-1,
+  .main-Rentabilidad__objeto-2,
+  .main-Rentabilidad__objeto-3,
+  .main-Rentabilidad__objeto-4 {
+    width: 300px;
+  }
+}
+
+/* --- FIN pantallas Tablets --- */

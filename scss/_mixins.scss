@@ -1,0 +1,5 @@
+
+@mixin alinear($align) {
+    @extend %flex;
+    align-items: $align;
+}

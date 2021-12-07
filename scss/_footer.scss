@@ -1,0 +1,118 @@
+
+/* --- Estilos del Footer --- */
+.footer {
+  font-family: var(--popins);
+  font-weight: 200;
+
+  bottom: 0px;
+
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+
+  z-index: 99;
+}
+
+.footer__logo {
+  width: 100px;
+
+  position: absolute;
+  left: 20px;
+  top: 25%;
+}
+
+.footer__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__navegacion {
+  padding: 0px;
+  li {
+    list-style: none;
+    margin: 0 20px;
+    font-size: 16px;
+    display: inline-block;
+
+    margin: 15px;
+  }
+}
+.footer__redes {
+  a {
+    margin: 0 15px;
+  }
+  img {
+    width: 40px;
+  }
+}
+.footer__derechos {
+  color: var(--blanco);
+  opacity: 0.3;
+  text-align: center;
+  font-weight: 600;
+  font-size: 12px;
+
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/* --- pantallas Laptops (1024px) --- */
+@media (max-width: 1024px) {
+  .footer {
+    width: 980px;
+  }
+}
+
+/* --- pantallas Tablets (768px) --- */
+@media (max-width: 768px) {
+  .footer {
+    width: auto;
+  }
+}
+
+/* --- pantalla smartphones (375px) --- */
+@media (max-width: 375px) {
+  .footer {
+    width: 360px;
+  }
+
+  .footer__logo {
+    top: 20px;
+  }
+
+  .footer__block {
+    align-items: flex-end;
+  }
+
+  .footer__navegacion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 15px;
+    margin: 10px 0;
+    margin-right: 20px;
+    li {
+      margin: 0;
+      text-align: right;
+    }
+  }
+  .footer__redes {
+    a {
+      margin: 14px;
+    }
+  }
+  .footer__derechos {
+    margin-top: 20px;
+  }
+}
+/* --- FINAL Estilos del Footer --- */

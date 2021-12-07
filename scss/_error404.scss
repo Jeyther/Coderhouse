@@ -1,0 +1,146 @@
+.main-404 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  position: relative;
+
+  margin: 0 25px;
+  min-height: 800px;
+
+  gap: 200px;
+}
+
+.main-404__texto__titulo {
+  font-family: var(--Rubik);
+  color: var(--blanco);
+  line-height: 80px;
+  word-spacing: -20px;
+  font-size: 80px;
+  font-weight: 200;
+
+  display: flex;
+  flex-direction: column;
+
+  .grande {
+    font-size: 100px;
+    letter-spacing: -5px;
+  }
+  .pequeño {
+    color: var(--naranja);
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 5px;
+  }
+}
+
+.main-404__texto__subtitulo {
+  font-family: var(--popins);
+  font-size: 20px;
+  color: var(--blanco);
+
+  margin-bottom: 60px;
+}
+
+.main-404__boton {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 200px;
+  height: 50px;
+  padding: 10px 10px;
+
+  background: linear-gradient(91.54deg, #ffb31e 2.78%, #ffe653 104.38%);
+  border-radius: 47px;
+}
+
+.main-404__boton__texto {
+    color: var(--blanco);
+    font-family: var(--Rubik);
+    font-size: 20px;
+  
+    word-spacing: -8px;
+    letter-spacing: -1px;
+    margin: auto;
+  }
+
+.error404__pantalla--div {
+  position: relative;
+}
+
+.error404__lupa {
+  position: absolute;
+  width: 200px;
+  right: 40px;
+  top: 180px;
+
+  animation: girar 6s infinite linear;
+}
+
+.error404__pantalla {
+  width: 100%;
+}
+
+.error404__cono {
+  position: absolute;
+  width: 50px;
+}
+
+@keyframes girar {
+  from {
+    transform: rotate(0deg) translate(-20px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translate(-20px) rotate(-360deg);
+  }
+}
+
+/*  --- RESPONSIVE (1024px) --- */
+@media (max-width: 1024px) {
+
+    .main-404{
+
+        gap: 120px;
+        
+    }
+    
+}
+
+/*  --- RESPONSIVE (768px) --- */
+
+@media (max-width: 768px) {
+    
+    .main-404{
+        
+        flex-direction: column;
+        margin-top: 120px;
+        gap: 40px;
+
+    }
+
+    .main-404__texto{
+
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+
+    }
+
+    .main-404__texto__subtitulo{
+
+        margin-bottom: 40px;
+
+    }
+
+  }
+  
+  /*  --- RESPONSIVE (375px) --- */
+  @media (max-width: 375px) {
+    .main-404{
+
+        gap: 60px;
+
+    }
+  }

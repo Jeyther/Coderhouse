@@ -1,0 +1,53 @@
+/* atributos globales */
+:root {
+  --Rubik: "Rubik Mono One", sans-serif;
+  --popins: "Poppins", sans-serif;
+  --blanco: #fff;
+  --negro: #000;
+  --naranja: #ffb31e;
+}
+
+$bg-degradado: enable;
+
+/* Eliminar margen en toda la pagina */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* dar color y eliminar subrayado a todos los enlaces */
+a {
+  font-family: var(--popins);
+  text-decoration: none;
+  color: var(--blanco);
+}
+
+/* --- ELIMINANDO MARGEN CREADO POR BOOTSTRAP ---- */
+p {
+  margin-bottom: 0;
+}
+
+/* color de fondo */
+.body {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+
+  /* --- CONDICIONAL PARA 'HABILITAR' EL DEGRADADO DE FONDO --- */
+  @if ($bg-degradado == enable) {
+    background: #141425;
+  } @else {
+    background: var(--blanco);
+  }
+
+}
+
+.selected {
+  color: var(--naranja);
+}
+
+
+/* FIN atributos globales */

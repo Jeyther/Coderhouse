@@ -1,0 +1,221 @@
+/* --- JUEGOS --- */
+
+.main-Juegos {
+  min-height: 800px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding: 20px 0;
+  margin-top: 100px;
+}
+
+.main-Juegos__carrusel {
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: repeat(3, 1fr);
+  max-width: 340px;
+  margin-left: 80px;
+
+  h4 {
+    font-family: var(--popins);
+    color: var(--naranja);
+    text-align: center;
+  }
+}
+
+.main-Juegos__carrusel__img {
+  width: 250px;
+}
+
+.main-Juegos__texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 55%;
+}
+
+.main-Juegos__titulo {
+  font-family: var(--Rubik);
+  color: var(--blanco);
+  font-size: 80px;
+  text-align: right;
+
+  line-height: 70px;
+}
+
+.main-Juegos__parafos {
+  font-family: var(--popins);
+  color: var(--blanco);
+  font-weight: 200;
+  text-align: right;
+}
+
+.main-Juegos__parafo {
+  margin: 20px 0;
+}
+
+.exanges {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  margin-top: 50px;
+}
+
+.exange__pancake,
+.exange__ape,
+.exange__poo {
+  display: inline-block;
+  text-align: center;
+
+  margin: 20px;
+}
+
+.exange__pancake__label,
+.exange__ape__label,
+.exange__poo__label {
+  font-family: var(--popins);
+  color: var(--naranja);
+  text-align: center;
+  line-height: 1;
+}
+
+/* --- AJUSTAR TAMAÑO DE IMAGENES DEL CARRUSEL---- */
+.carousel-inner {
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* ------ Responsive Pagina JUEGOS ------ */
+/* --- pantallas Laptops (1024px) --- */
+@media (max-width: 1024px) {
+  .main-Juegos {
+    gap: 20px;
+  }
+
+  .main-Juegos__texto {
+    width: 500px;
+    margin: 20px 0;
+  }
+
+  .main-Juegos__carrusel__img {
+    width: 220px;
+  }
+
+  .exanges {
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .exange__pancake__img,
+  .exange__ape__img,
+  .exange__poo__img {
+    width: 80px;
+  }
+
+  .exange__pancake__label,
+  .exange__ape__label,
+  .exange__poo__label {
+    font-size: 18px;
+  }
+  .main-Juegos__carrusel {
+    margin-left: 0px;
+  }
+}
+
+/* --- FIN pantallas Laptops --- */
+
+/* --- pantallas Tablets (768px) --- */
+@media (max-width: 768px) {
+  .main-Juegos {
+    flex-direction: column-reverse;
+
+    gap: 20px;
+
+    align-items: center;
+  }
+
+  .main-Juegos__texto {
+    width: 650px;
+  }
+
+  .main-Juegos__titulo {
+    text-align: center;
+  }
+
+  .main-Juegos__parafos {
+    text-align: center;
+  }
+
+  .main-Juegos__carrusel__img {
+    width: 220px;
+  }
+
+  .exanges {
+    margin: 0;
+    gap: 15px;
+  }
+
+  .exange__pancake__img,
+  .exange__ape__img,
+  .exange__poo__img {
+    width: 80px;
+  }
+
+  .exange__pancake__label,
+  .exange__ape__label,
+  .exange__poo__label {
+    font-size: 18px;
+  }
+
+
+}
+
+/* --- FIN pantallas Tablets --- */
+/* --- pantalla smartphones (375px) --- */
+@media (max-width: 375px) {
+  .main-Juegos {
+    align-items: center;
+  }
+
+  .main-Juegos__texto {
+    width: 350px;
+  }
+
+  .main-Juegos__titulo {
+    font-size: 60px;
+    text-align: center;
+  }
+
+  .main-Juegos__parafos {
+    text-align: center;
+  }
+
+  .main-Juegos__carrusel__img {
+    width: 180px;
+  }
+
+  .exanges {
+    margin: 0;
+    gap: 0px;
+  }
+
+  .exange__pancake__img,
+  .exange__ape__img,
+  .exange__poo__img {
+    width: 80px;
+  }
+
+  .exange__pancake__label,
+  .exange__ape__label,
+  .exange__poo__label {
+    font-size: 18px;
+  }
+}
+
+/* --- FIN pantalla smartphones --- */

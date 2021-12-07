@@ -1,0 +1,144 @@
+/* --- PLAY TO EARN -- */
+
+.main-PlayToEarn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 700px;
+  b {
+    color: var(--naranja);
+  }
+}
+
+.main-PlayToEarn__titulo {
+  font-family: var(--Rubik);
+  color: var(--blanco);
+  font-size: 80px;
+  word-spacing: -30px;
+  margin-bottom: 80px;
+}
+
+.main-PlayToEarn__objetos {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.main-PlayToEarn__objeto-1,
+.main-PlayToEarn__objeto-2,
+.main-PlayToEarn__objeto-3,
+.main-PlayToEarn__objeto-4 {
+  font-family: var(--popins);
+  color: var(--blanco);
+  font-weight: 200;
+  text-align: center;
+
+  width: 250px;
+}
+
+.main-PlayToEarn__objeto__img {
+  width: 60%;
+  margin-bottom: 20px;
+}
+
+.main-PlayToEarn__objeto-1__parrafo,
+.main-PlayToEarn__objeto-2__parrafo,
+.main-PlayToEarn__objeto-3__parrafo,
+.main-PlayToEarn__objeto-4__parrafo {
+  font-size: 12px;
+}
+
+/* ------ ANIMACION DE SLIDE CON EACH Y LIST ------ */
+
+$animation-delays: 0,400ms,800ms,1200ms;
+@each $delay in $animation-delays {
+
+  .slideRight-#{$delay} {
+    animation-name: slideRight;
+    animation-duration: 700ms;	
+    animation-delay: $delay;
+    animation-timing-function: ease-in-out;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+/* ------ FIN ANIMACION DE SLIDE CON EACH Y LIST ------ */
+
+
+/* ------ Responsive Pagina PLAY TO EARN ------ */
+
+/* --- pantallas Laptops (1024px) --- */
+@media (max-width: 1024px) {
+  .main-PlayToEarn__titulo {
+    font-size: 62px;
+  }
+
+  .main-PlayToEarn__objetos {
+    gap: 25px;
+  }
+
+  .main-PlayToEarn__objeto-1,
+  .main-PlayToEarn__objeto-2,
+  .main-PlayToEarn__objeto-3,
+  .main-PlayToEarn__objeto-4 {
+    width: 220px;
+  }
+}
+
+/* --- FIN pantallas Laptops --- */
+
+/* --- pantallas Tablets (768px) --- */
+@media (max-width: 768px) {
+  .main-PlayToEarn {
+    margin: 30px 0;
+    margin-top: 100px;
+  }
+
+  .main-PlayToEarn__titulo {
+    margin-bottom: 20px;
+  }
+
+  .main-PlayToEarn__objetos {
+    justify-content: space-evenly;
+    gap: 25px;
+  }
+
+  .main-PlayToEarn__objeto-1,
+  .main-PlayToEarn__objeto-2,
+  .main-PlayToEarn__objeto-3,
+  .main-PlayToEarn__objeto-4 {
+    width: 250px;
+  }
+}
+
+/* --- FIN pantallas Tablets --- */
+
+/* --- pantalla smartphones (375px) --- */
+@media (max-width: 375px) {
+  .main-PlayToEarn {
+    margin: 30px 0;
+    margin-top: 150px;
+  }
+
+  .main-PlayToEarn__titulo {
+    font-size: 35px;
+    word-spacing: -15px;
+  }
+}
+
+/* --- FIN pantalla smartphones --- */

@@ -1,0 +1,117 @@
+/*  --- ESTILOS HEADER ---  */
+
+.header {
+  position: sticky;
+  top: 0px;
+
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+
+  width: 100%;
+  border-radius: 0 0 20px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  z-index: 100;
+}
+
+.header__logo {
+  width: 50px;
+  margin: 10px 15px;
+}
+
+/* --- Estilos Menu ---  */
+
+.header__menu__botones {
+  padding: 0px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+
+  margin-right: 25px;
+
+  li {
+    list-style: none;
+    font-weight: 600;
+    font-size: 18px;
+    a {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      position: relative;
+      &:hover {
+        color: var(--naranja);
+        &::before {
+          transform: scaleX(1);
+        }
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: var(--blanco);
+        z-index: 1;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.5s ease-in-out;
+      }
+    }
+  }
+}
+
+/* resaltar pagina seleccionada */
+.selected {
+  color: var(--naranja);
+}
+
+/* --- pantallas Laptops (1024px) --- */
+@media (max-width: 1024px) {
+  .header {
+    width: 980px;
+  }
+
+  .header__menu__botones {
+    gap: 20px;
+    li {
+      font-size: 16px;
+    }
+  }
+}
+/* --- pantallas Laptops (768px) --- */
+@media (max-width: 768px) {
+  .header {
+    position: relative;
+
+    flex-direction: column;
+    align-items: center;
+
+    width: 720px;
+  }
+}
+/* --- pantallas Laptops (375px) --- */
+@media (max-width: 375px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+
+    width: 360px;
+  }
+
+  .header__menu__botones {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin-right: 0;
+    margin-bottom: 10px;
+    gap: 5px;
+    li {
+      font-size: 22px;
+    }
+  }
+}
