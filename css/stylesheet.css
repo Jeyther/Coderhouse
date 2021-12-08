@@ -7822,6 +7822,11 @@ textarea.form-control-lg {
   display: flex;
   flex-direction: column; }
 
+.main__bg_images, .segundaSeccion__bg_images, .terceraSeccion__bg_images, .cuartaSeccion__bg_images, .quintaSeccion__bg_images, .sextaSeccion__bg_images {
+  width: 100%;
+  height: 100%;
+  position: absolute; }
+
 /* atributos globales */
 :root {
   --Rubik: "Rubik Mono One", sans-serif;
@@ -8697,19 +8702,6 @@ p {
     left: 42%; } }
 
 /* --- FIN IMAGEN S6 --- */
-/* --------- IMAGENES DE FONDO --------- */
-.img_fondo {
-  position: absolute;
-  z-index: -2;
-  top: -100px;
-  left: 50px; }
-
-.img_fondo_2 {
-  top: 100px;
-  left: 400px;
-  position: absolute;
-  z-index: -1; }
-
 /* ------------------------------------ Responsive Pagina Principal ------------------------------------ */
 /* --- pantallas Laptops (1024px) --- */
 @media (max-width: 1024px) {
@@ -9911,3 +9903,76 @@ p {
 @media (max-width: 375px) {
   .main-404 {
     gap: 60px; } }
+
+/* --------- IMAGENES DE FONDO --------- */
+.main__bg_images .main__bg_images_fondo {
+  position: absolute;
+  z-index: -2;
+  top: -100px;
+  left: -600px; }
+
+.main__bg_images .main__bg_images_1 {
+  top: 100px;
+  left: -300px;
+  position: absolute;
+  z-index: -1; }
+
+.segundaSeccion__bg_images .segundaSeccion__bg_images_fondo {
+  position: absolute;
+  z-index: -2;
+  top: -100px;
+  right: -600px; }
+
+.segundaSeccion__bg_images .segundaSeccion__bg_images_1 {
+  top: 100px;
+  right: -600px;
+  position: absolute;
+  z-index: -1; }
+
+.terceraSeccion__bg_images .terceraSeccion__bg_images_fondo {
+  position: absolute;
+  z-index: -2;
+  top: -100px;
+  left: -600px; }
+
+.terceraSeccion__bg_images .terceraSeccion__bg_images_1 {
+  top: 100px;
+  left: -300px;
+  position: absolute;
+  z-index: -1; }
+
+.cuartaSeccion__bg_images .cuartaSeccion__bg_images_fondo {
+  position: absolute;
+  z-index: -2;
+  top: -100px;
+  right: -600px; }
+
+.cuartaSeccion__bg_images .cuartaSeccion__bg_images_1 {
+  top: 100px;
+  right: -600px;
+  position: absolute;
+  z-index: -1; }
+
+.quintaSeccion__bg_images .quintaSeccion__bg_images_fondo {
+  position: absolute;
+  z-index: -2;
+  top: -100;
+  left: 400px; }
+
+.quintaSeccion__bg_images .quintaSeccion__bg_images_1 {
+  top: 200px;
+  left: 700px;
+  position: absolute;
+  z-index: -1; }
+
+.sextaSeccion__bg_images .sextaSeccion__bg_images_fondo {
+  position: absolute;
+  z-index: -2;
+  top: -100px;
+  right: -600px; }
+
+.sextaSeccion__bg_images .sextaSeccion__bg_images_1 {
+  top: 100px;
+  right: -600px;
+  position: absolute;
+  z-index: -1; }

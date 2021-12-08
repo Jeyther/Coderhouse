@@ -1,0 +1,32 @@
+/* --------- IMAGENES DE FONDO --------- */
+
+.main__bg_images {
+  @extend %bg_position;
+
+  @include bg_img_sideLeft(main);
+}
+.segundaSeccion__bg_images {
+  @extend %bg_position;
+
+  @include bg_img_sideRight(segundaSeccion);
+}
+.terceraSeccion__bg_images {
+  @extend %bg_position;
+
+  @include bg_img_sideLeft(terceraSeccion);
+}
+.cuartaSeccion__bg_images {
+  @extend %bg_position;
+
+  @include bg_img_sideRight(cuartaSeccion);
+}
+.quintaSeccion__bg_images {
+  @extend %bg_position;
+
+  @include bg_img_sideCenter(quintaSeccion);
+}
+.sextaSeccion__bg_images {
+  @extend %bg_position;
+
+  @include bg_img_sideRight(sextaSeccion);
+}

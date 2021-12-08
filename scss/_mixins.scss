@@ -1,5 +1,49 @@
-
 @mixin alinear($align) {
-    @extend %flex;
-    align-items: $align;
+  @extend %flex;
+  align-items: $align;
+}
+
+@mixin bg_img_sideLeft($class) {
+  .#{$class}__bg_images_fondo {
+    position: absolute;
+    z-index: -2;
+    top: -100px;
+    left: -600px;
+  }
+  .#{$class}__bg_images_1 {
+    top: 100px;
+    left: -300px;
+    position: absolute;
+    z-index: -1;
+  }
+}
+
+@mixin bg_img_sideRight($class) {
+  .#{$class}__bg_images_fondo {
+    position: absolute;
+    z-index: -2;
+    top: -100px;
+    right: -600px;
+  }
+  .#{$class}__bg_images_1 {
+    top: 100px;
+    right: -600px;
+    position: absolute;
+    z-index: -1;
+  }
+}
+
+@mixin bg_img_sideCenter($class) {
+  .#{$class}__bg_images_fondo {
+    position: absolute;
+    z-index: -2;
+    top: -100;
+    left: 400px;
+  }
+  .#{$class}__bg_images_1 {
+    top: 200px;
+    left: 700px;
+    position: absolute;
+    z-index: -1;
+  }
 }
