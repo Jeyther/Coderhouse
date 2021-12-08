@@ -7828,7 +7828,7 @@ textarea.form-control-lg {
   display: flex;
   flex-direction: column; }
 
-.main__bg_images, .segundaSeccion__bg_images, .terceraSeccion__bg_images, .cuartaSeccion__bg_images, .quintaSeccion__bg_images, .sextaSeccion__bg_images {
+.main__bg_images, .segundaSeccion__bg_images, .terceraSeccion__bg_images, .cuartaSeccion__bg_images, .quintaSeccion__bg_images, .sextaSeccion__bg_images, .main-blockchain__bg_images {
   width: 100%;
   height: 100%;
   position: absolute; }
@@ -7873,6 +7873,18 @@ p {
 /* FIN atributos globales */
 /* --- ESTILOS PAGINA PRINCIPAL --- */
 /* Margenes, paddings y display */
+.ruido {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../img/noise.gif);
+  background-size: auto;
+  background-repeat: repeat;
+  opacity: .04;
+  z-index: -1; }
+
 .main,
 .segundaSeccion,
 .terceraSeccion,
@@ -9177,14 +9189,14 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1280px;
-  background: linear-gradient(359.34deg, #000000 59.23%, #1c1f59 100%); }
+  max-width: 1280px; }
 
 .main-blockchain {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 700px; }
+  min-height: 700px;
+  margin-top: 60px; }
 
 .main-blockchain__texto {
   width: 49%; }
@@ -9203,15 +9215,177 @@ p {
   .main-blockchain__texto__subtitulo b {
     color: var(--naranja); }
 
-.main-blockchain__video {
-  width: 48%; }
+/* ---- Seccion de imagen ---- */
+.main-blockchain__img {
+  position: relative; }
+
+.main-blockchain__img__fondo {
+  position: relative;
+  width: 600px;
+  right: 0; }
+
+.main-blockchain__img__bitcoin,
+.main-blockchain__img__etherium,
+.main-blockchain__img__litecoin,
+.main-blockchain__img__dashcoin {
+  position: absolute; }
+
+.main-blockchain__img__bitcoin {
+  left: 200px;
+  bottom: 250px;
+  animation-name: flotar-bitcoin;
+  animation-iteration-count: infinite;
+  animation-duration: 4s; }
+
+.main-blockchain__img__etherium {
+  left: 115px;
+  bottom: 315px;
+  width: 75px;
+  animation-name: flotar-etherium;
+  animation-iteration-count: infinite;
+  animation-delay: 0.2s;
+  animation-duration: 4s; }
+
+.main-blockchain__img__litecoin {
+  left: 115px;
+  bottom: 150px;
+  width: 75px;
+  animation-name: flotar-lite_dash;
+  animation-iteration-count: infinite;
+  animation-delay: 0.35s;
+  animation-duration: 4s; }
+
+.main-blockchain__img__dashcoin {
+  left: 400px;
+  bottom: 150px;
+  width: 75px;
+  animation-name: flotar-lite_dash;
+  animation-iteration-count: infinite;
+  animation-delay: 0.5s;
+  animation-duration: 4s; }
+
+.destello-1,
+.destello-2,
+.destello-3,
+.destello-4,
+.destello-5 {
+  position: absolute;
+  width: 150px; }
+
+.destello-1 {
+  left: 83px;
+  bottom: 120px; }
+
+.destello-2 {
+  left: 83px;
+  bottom: 287px; }
+
+.destello-3 {
+  left: 365px;
+  bottom: 287px; }
+
+.destello-4 {
+  left: 367px;
+  bottom: 120px; }
+
+.destello-5 {
+  left: 125px;
+  bottom: 188px;
+  width: 348px; }
+
+@keyframes flotar-bitcoin {
+  0% {
+    bottom: 250px; }
+  50% {
+    bottom: 300px; }
+  100% {
+    bottom: 250px; } }
+
+@keyframes flotar-etherium {
+  0% {
+    bottom: 315px; }
+  50% {
+    bottom: 365px; }
+  100% {
+    bottom: 315px; } }
+
+@keyframes flotar-lite_dash {
+  0% {
+    bottom: 150px; }
+  50% {
+    bottom: 200px; }
+  100% {
+    bottom: 150px; } }
 
 /* ------ Responsive Pagina BLOCKCHAIN ------ */
 /* --- pantallas Laptops (1024px) --- */
 @media (max-width: 1024px) {
   .main-blockchain {
     margin: 0 50px;
-    margin-top: 100px; } }
+    margin-top: 80px; }
+  .main-blockchain__img__fondo {
+    width: 400px; }
+  .main-blockchain__img__bitcoin,
+  .main-blockchain__img__etherium,
+  .main-blockchain__img__litecoin,
+  .main-blockchain__img__dashcoin {
+    width: 50px; }
+  .main-blockchain__img__bitcoin {
+    left: 134px;
+    bottom: 167px;
+    width: 134px; }
+  .main-blockchain__img__etherium {
+    left: 77px;
+    bottom: 210px; }
+  .main-blockchain__img__litecoin {
+    left: 76px;
+    bottom: 100px; }
+  .main-blockchain__img__dashcoin {
+    left: 267px;
+    bottom: 100px; }
+  .destello-1,
+  .destello-2,
+  .destello-3,
+  .destello-4,
+  .destello-5 {
+    width: 100px; }
+  .destello-1 {
+    left: 55px;
+    bottom: 80px; }
+  .destello-2 {
+    left: 55px;
+    bottom: 192px; }
+  .destello-3 {
+    left: 243px;
+    bottom: 192px; }
+  .destello-4 {
+    left: 243px;
+    bottom: 80px; }
+  .destello-5 {
+    left: 83px;
+    bottom: 125px;
+    width: 232px; }
+  @keyframes flotar-bitcoin {
+    0% {
+      bottom: 167px; }
+    50% {
+      bottom: 200px; }
+    100% {
+      bottom: 167px; } }
+  @keyframes flotar-etherium {
+    0% {
+      bottom: 210px; }
+    50% {
+      bottom: 244px; }
+    100% {
+      bottom: 210px; } }
+  @keyframes flotar-lite_dash {
+    0% {
+      bottom: 100px; }
+    50% {
+      bottom: 133px; }
+    100% {
+      bottom: 100px; } } }
 
 /* --- FIN pantallas Laptops --- */
 /* --- pantallas Tablets (768px) --- */
@@ -9223,7 +9397,93 @@ p {
   .main-blockchain__texto {
     width: auto; }
   .main-blockchain__video {
-    width: 700px; } }
+    width: 700px; }
+  .main-blockchain__img {
+    position: relative; }
+  .main-blockchain__img__fondo {
+    position: relative;
+    width: 600px;
+    right: 0; }
+  .main-blockchain__img__bitcoin,
+  .main-blockchain__img__etherium,
+  .main-blockchain__img__litecoin,
+  .main-blockchain__img__dashcoin {
+    position: absolute; }
+  .main-blockchain__img__bitcoin {
+    left: 200px;
+    bottom: 250px;
+    width: 200px;
+    animation-name: flotar-bitcoin;
+    animation-iteration-count: infinite;
+    animation-duration: 4s; }
+  .main-blockchain__img__etherium {
+    left: 115px;
+    bottom: 315px;
+    width: 75px;
+    animation-name: flotar-etherium;
+    animation-iteration-count: infinite;
+    animation-delay: 0.2s;
+    animation-duration: 4s; }
+  .main-blockchain__img__litecoin {
+    left: 115px;
+    bottom: 150px;
+    width: 75px;
+    animation-name: flotar-lite_dash;
+    animation-iteration-count: infinite;
+    animation-delay: 0.35s;
+    animation-duration: 4s; }
+  .main-blockchain__img__dashcoin {
+    left: 400px;
+    bottom: 150px;
+    width: 75px;
+    animation-name: flotar-lite_dash;
+    animation-iteration-count: infinite;
+    animation-delay: 0.5s;
+    animation-duration: 4s; }
+  .destello-1,
+  .destello-2,
+  .destello-3,
+  .destello-4,
+  .destello-5 {
+    position: absolute;
+    width: 150px; }
+  .destello-1 {
+    left: 83px;
+    bottom: 120px; }
+  .destello-2 {
+    left: 83px;
+    bottom: 287px; }
+  .destello-3 {
+    left: 365px;
+    bottom: 287px; }
+  .destello-4 {
+    left: 367px;
+    bottom: 120px; }
+  .destello-5 {
+    left: 125px;
+    bottom: 188px;
+    width: 348px; }
+  @keyframes flotar-bitcoin {
+    0% {
+      bottom: 250px; }
+    50% {
+      bottom: 300px; }
+    100% {
+      bottom: 250px; } }
+  @keyframes flotar-etherium {
+    0% {
+      bottom: 315px; }
+    50% {
+      bottom: 365px; }
+    100% {
+      bottom: 315px; } }
+  @keyframes flotar-lite_dash {
+    0% {
+      bottom: 150px; }
+    50% {
+      bottom: 200px; }
+    100% {
+      bottom: 150px; } } }
 
 /* --- FIN pantallas Tablets --- */
 /* --- pantalla smartphones (375px) --- */
@@ -9237,8 +9497,69 @@ p {
     font-size: 12px;
     text-align: center;
     margin: 15px 0; }
-  .main-blockchain__video {
-    width: 330px; } }
+  .main-blockchain__img__fondo {
+    width: 320px; }
+  .main-blockchain__img__bitcoin,
+  .main-blockchain__img__etherium,
+  .main-blockchain__img__litecoin,
+  .main-blockchain__img__dashcoin {
+    width: 40px; }
+  .main-blockchain__img__bitcoin {
+    left: 107px;
+    bottom: 137px;
+    width: 107px; }
+  .main-blockchain__img__etherium {
+    left: 62px;
+    bottom: 168px; }
+  .main-blockchain__img__litecoin {
+    left: 62px;
+    bottom: 80px; }
+  .main-blockchain__img__dashcoin {
+    left: 214px;
+    bottom: 80px; }
+  .destello-1,
+  .destello-2,
+  .destello-3,
+  .destello-4,
+  .destello-5 {
+    width: 80px; }
+  .destello-1 {
+    left: 44px;
+    bottom: 64px; }
+  .destello-2 {
+    left: 44px;
+    bottom: 154px; }
+  .destello-3 {
+    left: 195px;
+    bottom: 154px; }
+  .destello-4 {
+    left: 195px;
+    bottom: 64px; }
+  .destello-5 {
+    left: 67px;
+    bottom: 100px;
+    width: 186px; }
+  @keyframes flotar-bitcoin {
+    0% {
+      bottom: 132px; }
+    50% {
+      bottom: 160px; }
+    100% {
+      bottom: 132px; } }
+  @keyframes flotar-etherium {
+    0% {
+      bottom: 168px; }
+    50% {
+      bottom: 195px; }
+    100% {
+      bottom: 168px; } }
+  @keyframes flotar-lite_dash {
+    0% {
+      bottom: 80px; }
+    50% {
+      bottom: 107px; }
+    100% {
+      bottom: 80px; } } }
 
 /* --- FIN pantalla smartphones --- */
 /* --- PLAY TO EARN -- */
@@ -9910,7 +10231,7 @@ p {
   .main-404 {
     gap: 60px; } }
 
-/* --------- IMAGENES DE FONDO --------- */
+/* --------- IMAGENES DE FONDO INDEX.HTML--------- */
 .main__bg_images {
   /*  --- RESPONSIVE (1024px) --- */
   /*  --- RESPONSIVE (375px) --- */ }
@@ -10080,3 +10401,35 @@ p {
       top: 50px;
       right: -20px;
       width: 300px; } }
+
+/* --------- FIN IMAGENES DE FONDO INDEX.HTML--------- */
+.main-blockchain__bg_images {
+  max-width: 1200px;
+  /*  --- RESPONSIVE (1024px) --- */
+  /*  --- RESPONSIVE (375px) --- */ }
+  .main-blockchain__bg_images .main-blockchain__bg_images_fondo {
+    position: absolute;
+    z-index: -2;
+    top: -100px;
+    left: -600px; }
+  .main-blockchain__bg_images .main-blockchain__bg_images_1 {
+    top: 100px;
+    left: -300px;
+    position: absolute;
+    z-index: -1; }
+  @media (max-width: 1024px) {
+    .main-blockchain__bg_images .main-blockchain__bg_images_fondo {
+      top: -300px;
+      left: -600px; }
+    .main-blockchain__bg_images .main-blockchain__bg_images_1 {
+      top: -100px;
+      left: -300px; } }
+  @media (max-width: 375px) {
+    .main-blockchain__bg_images .main-blockchain__bg_images_fondo {
+      top: -200px;
+      left: -400px;
+      width: 600px; }
+    .main-blockchain__bg_images .main-blockchain__bg_images_1 {
+      top: -75px;
+      left: -200px;
+      width: 400px; } }

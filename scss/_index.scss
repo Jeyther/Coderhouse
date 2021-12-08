@@ -2,6 +2,20 @@
 
 /* Margenes, paddings y display */
 
+.ruido {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url(../img/noise.gif);
+  background-size: auto;
+  background-repeat: repeat;
+  opacity: .04;
+  z-index: -1;
+}
 
 .main,
 .segundaSeccion,

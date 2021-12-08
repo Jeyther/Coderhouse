@@ -1,32 +1,40 @@
-/* --------- IMAGENES DE FONDO --------- */
+/* --------- IMAGENES DE FONDO INDEX.HTML--------- */
 
 .main__bg_images {
-  @extend %bg_position;
-
-  @include bg_img_sideLeft(main);
+    @extend %bg_position;
+    
+    @include bg_img_sideLeft(main);
 }
 .segundaSeccion__bg_images {
-  @extend %bg_position;
-
-  @include bg_img_sideRight(segundaSeccion);
+    @extend %bg_position;
+    
+    @include bg_img_sideRight(segundaSeccion);
 }
 .terceraSeccion__bg_images {
-  @extend %bg_position;
-
-  @include bg_img_sideLeft(terceraSeccion);
+    @extend %bg_position;
+    
+    @include bg_img_sideLeft(terceraSeccion);
 }
 .cuartaSeccion__bg_images {
-  @extend %bg_position;
-
-  @include bg_img_sideRight(cuartaSeccion);
+    @extend %bg_position;
+    
+    @include bg_img_sideRight(cuartaSeccion);
 }
 .quintaSeccion__bg_images {
-  @extend %bg_position;
-
-  @include bg_img_sideCenter(quintaSeccion);
+    @extend %bg_position;
+    
+    @include bg_img_sideCenter(quintaSeccion);
 }
 .sextaSeccion__bg_images {
-  @extend %bg_position;
+    @extend %bg_position;
+    
+    @include bg_img_sideRight(sextaSeccion);
+}
+/* --------- FIN IMAGENES DE FONDO INDEX.HTML--------- */
 
-  @include bg_img_sideRight(sextaSeccion);
+.main-blockchain__bg_images {
+    @extend %bg_position;
+    max-width: 1200px;
+    
+    @include bg_img_sideLeft(main-blockchain);
 }
