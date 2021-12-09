@@ -7828,7 +7828,7 @@ textarea.form-control-lg {
   display: flex;
   flex-direction: column; }
 
-.main__bg_images, .segundaSeccion__bg_images, .terceraSeccion__bg_images, .cuartaSeccion__bg_images, .quintaSeccion__bg_images, .sextaSeccion__bg_images, .main-blockchain__bg_images {
+.main__bg_images, .segundaSeccion__bg_images, .terceraSeccion__bg_images, .cuartaSeccion__bg_images, .quintaSeccion__bg_images, .sextaSeccion__bg_images, .main-NFT__bg_images, .main-blockchain__bg_images, .main-PlayToEarn__bg_images, .main-Juegos__bg_images, .main-Rentabilidad__bg_images, .main-Newsletter__bg_images {
   width: 100%;
   height: 100%;
   position: absolute; }
@@ -7873,18 +7873,6 @@ p {
 /* FIN atributos globales */
 /* --- ESTILOS PAGINA PRINCIPAL --- */
 /* Margenes, paddings y display */
-.ruido {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-image: url(../img/noise.gif);
-  background-size: auto;
-  background-repeat: repeat;
-  opacity: .04;
-  z-index: -1; }
-
 .main,
 .segundaSeccion,
 .terceraSeccion,
@@ -8124,6 +8112,20 @@ p {
   border-radius: 47px;
   display: inline-block; }
 
+/* ----- RUIDO DE FONDO -----  */
+.ruido {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../img/noise.gif);
+  background-size: auto;
+  background-repeat: repeat;
+  opacity: .04;
+  z-index: -1; }
+
+/* ----- FIN RUIDO DE FONDO -----  */
 /* ----- ASIGNAR COLORES CON MAP Y EACH -----  */
 .carrusel__tarjeta__pvu {
   background-color: #dc7ae9;
@@ -9061,6 +9063,20 @@ p {
   z-index: -1;
   width: 200px; }
 
+/* ----- RUIDO DE FONDO -----  */
+.ruido {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../img/noise.gif);
+  background-size: auto;
+  background-repeat: repeat;
+  opacity: 0.04;
+  z-index: -1; }
+
+/* ----- FIN RUIDO DE FONDO -----  */
 /* ------ Responsive Pagina NFT ------ */
 /* --- pantallas Laptops (1024px) --- */
 @media (max-width: 1024px) {
@@ -9648,6 +9664,20 @@ p {
     visibility: visible; } }
 
 /* ------ FIN ANIMACION DE SLIDE CON EACH Y LIST ------ */
+/* ----- RUIDO DE FONDO -----  */
+.ruido {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../img/noise.gif);
+  background-size: auto;
+  background-repeat: repeat;
+  opacity: 0.04;
+  z-index: -1; }
+
+/* ----- FIN RUIDO DE FONDO -----  */
 /* ------ Responsive Pagina PLAY TO EARN ------ */
 /* --- pantallas Laptops (1024px) --- */
 @media (max-width: 1024px) {
@@ -10402,7 +10432,38 @@ p {
       right: -20px;
       width: 300px; } }
 
-/* --------- FIN IMAGENES DE FONDO INDEX.HTML--------- */
+/* --------- IMAGENES DE FONDO NFT.HTML--------- */
+.main-NFT__bg_images {
+  /*  --- RESPONSIVE (1024px) --- */
+  /*  --- RESPONSIVE (375px) --- */ }
+  .main-NFT__bg_images .main-NFT__bg_images_fondo {
+    position: absolute;
+    z-index: -2;
+    top: -100px;
+    left: -600px; }
+  .main-NFT__bg_images .main-NFT__bg_images_1 {
+    top: 100px;
+    left: -300px;
+    position: absolute;
+    z-index: -1; }
+  @media (max-width: 1024px) {
+    .main-NFT__bg_images .main-NFT__bg_images_fondo {
+      top: -300px;
+      left: -600px; }
+    .main-NFT__bg_images .main-NFT__bg_images_1 {
+      top: -100px;
+      left: -300px; } }
+  @media (max-width: 375px) {
+    .main-NFT__bg_images .main-NFT__bg_images_fondo {
+      top: -200px;
+      left: -400px;
+      width: 600px; }
+    .main-NFT__bg_images .main-NFT__bg_images_1 {
+      top: -75px;
+      left: -200px;
+      width: 400px; } }
+
+/* --------- IMAGENES DE FONDO BLOCKCHAIN.HTML--------- */
 .main-blockchain__bg_images {
   max-width: 1200px;
   /*  --- RESPONSIVE (1024px) --- */
@@ -10430,6 +10491,132 @@ p {
       left: -400px;
       width: 600px; }
     .main-blockchain__bg_images .main-blockchain__bg_images_1 {
+      top: -75px;
+      left: -200px;
+      width: 400px; } }
+
+/* --------- IMAGENES DE FONDO PLAY_TO_EARN.HTML--------- */
+.main-PlayToEarn__bg_images {
+  max-width: 1200px;
+  /*  --- RESPONSIVE (1024px) --- */
+  /*  --- RESPONSIVE (375px) --- */ }
+  .main-PlayToEarn__bg_images .main-PlayToEarn__bg_images_fondo {
+    position: absolute;
+    z-index: -2;
+    top: -100px;
+    left: -600px; }
+  .main-PlayToEarn__bg_images .main-PlayToEarn__bg_images_1 {
+    top: 100px;
+    left: -300px;
+    position: absolute;
+    z-index: -1; }
+  @media (max-width: 1024px) {
+    .main-PlayToEarn__bg_images .main-PlayToEarn__bg_images_fondo {
+      top: -300px;
+      left: -600px; }
+    .main-PlayToEarn__bg_images .main-PlayToEarn__bg_images_1 {
+      top: -100px;
+      left: -300px; } }
+  @media (max-width: 375px) {
+    .main-PlayToEarn__bg_images .main-PlayToEarn__bg_images_fondo {
+      top: -200px;
+      left: -400px;
+      width: 600px; }
+    .main-PlayToEarn__bg_images .main-PlayToEarn__bg_images_1 {
+      top: -75px;
+      left: -200px;
+      width: 400px; } }
+
+/* --------- IMAGENES DE FONDO JUEGOS.HTML--------- */
+.main-Juegos__bg_images {
+  /*  --- RESPONSIVE (1024px) --- */
+  /*  --- RESPONSIVE (375px) --- */ }
+  .main-Juegos__bg_images .main-Juegos__bg_images_fondo {
+    position: absolute;
+    z-index: -2;
+    top: -100px;
+    left: -600px; }
+  .main-Juegos__bg_images .main-Juegos__bg_images_1 {
+    top: 100px;
+    left: -300px;
+    position: absolute;
+    z-index: -1; }
+  @media (max-width: 1024px) {
+    .main-Juegos__bg_images .main-Juegos__bg_images_fondo {
+      top: -300px;
+      left: -600px; }
+    .main-Juegos__bg_images .main-Juegos__bg_images_1 {
+      top: -100px;
+      left: -300px; } }
+  @media (max-width: 375px) {
+    .main-Juegos__bg_images .main-Juegos__bg_images_fondo {
+      top: -200px;
+      left: -400px;
+      width: 600px; }
+    .main-Juegos__bg_images .main-Juegos__bg_images_1 {
+      top: -75px;
+      left: -200px;
+      width: 400px; } }
+
+/* --------- IMAGENES DE FONDO RENTABILIDAD.HTML--------- */
+.main-Rentabilidad__bg_images {
+  /*  --- RESPONSIVE (1024px) --- */
+  /*  --- RESPONSIVE (375px) --- */ }
+  .main-Rentabilidad__bg_images .main-Rentabilidad__bg_images_fondo {
+    position: absolute;
+    z-index: -2;
+    top: -100px;
+    left: -600px; }
+  .main-Rentabilidad__bg_images .main-Rentabilidad__bg_images_1 {
+    top: 100px;
+    left: -300px;
+    position: absolute;
+    z-index: -1; }
+  @media (max-width: 1024px) {
+    .main-Rentabilidad__bg_images .main-Rentabilidad__bg_images_fondo {
+      top: -300px;
+      left: -600px; }
+    .main-Rentabilidad__bg_images .main-Rentabilidad__bg_images_1 {
+      top: -100px;
+      left: -300px; } }
+  @media (max-width: 375px) {
+    .main-Rentabilidad__bg_images .main-Rentabilidad__bg_images_fondo {
+      top: -200px;
+      left: -400px;
+      width: 600px; }
+    .main-Rentabilidad__bg_images .main-Rentabilidad__bg_images_1 {
+      top: -75px;
+      left: -200px;
+      width: 400px; } }
+
+/* --------- IMAGENES DE FONDO RENTABILIDAD.HTML--------- */
+.main-Newsletter__bg_images {
+  max-width: 1200px;
+  /*  --- RESPONSIVE (1024px) --- */
+  /*  --- RESPONSIVE (375px) --- */ }
+  .main-Newsletter__bg_images .main-Newsletter__bg_images_fondo {
+    position: absolute;
+    z-index: -2;
+    top: -100px;
+    left: -600px; }
+  .main-Newsletter__bg_images .main-Newsletter__bg_images_1 {
+    top: 100px;
+    left: -300px;
+    position: absolute;
+    z-index: -1; }
+  @media (max-width: 1024px) {
+    .main-Newsletter__bg_images .main-Newsletter__bg_images_fondo {
+      top: -300px;
+      left: -600px; }
+    .main-Newsletter__bg_images .main-Newsletter__bg_images_1 {
+      top: -100px;
+      left: -300px; } }
+  @media (max-width: 375px) {
+    .main-Newsletter__bg_images .main-Newsletter__bg_images_fondo {
+      top: -200px;
+      left: -400px;
+      width: 600px; }
+    .main-Newsletter__bg_images .main-Newsletter__bg_images_1 {
       top: -75px;
       left: -200px;
       width: 400px; } }

@@ -53,17 +53,16 @@
 
 /* ------ ANIMACION DE SLIDE CON EACH Y LIST ------ */
 
-$animation-delays: 0,400ms,800ms,1200ms;
+$animation-delays: 0, 400ms, 800ms, 1200ms;
 @each $delay in $animation-delays {
-
   .slideRight-#{$delay} {
     animation-name: slideRight;
-    animation-duration: 700ms;	
+    animation-duration: 700ms;
     animation-delay: $delay;
     animation-timing-function: ease-in-out;
     visibility: hidden;
     animation-fill-mode: forwards;
-}
+  }
 }
 
 @keyframes slideRight {
@@ -79,6 +78,21 @@ $animation-delays: 0,400ms,800ms,1200ms;
 }
 /* ------ FIN ANIMACION DE SLIDE CON EACH Y LIST ------ */
 
+/* ----- RUIDO DE FONDO -----  */
+.ruido {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url(../img/noise.gif);
+  background-size: auto;
+  background-repeat: repeat;
+  opacity: 0.04;
+  z-index: -1;
+}
+/* ----- FIN RUIDO DE FONDO -----  */
 
 /* ------ Responsive Pagina PLAY TO EARN ------ */
 

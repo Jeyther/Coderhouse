@@ -1,14 +1,14 @@
 /* --------- IMAGENES DE FONDO INDEX.HTML--------- */
 
 .main__bg_images {
-    @extend %bg_position;
-    
-    @include bg_img_sideLeft(main);
+  @extend %bg_position;
+
+  @include bg_img_sideLeft(main);
 }
 .segundaSeccion__bg_images {
-    @extend %bg_position;
-    
-    @include bg_img_sideRight(segundaSeccion);
+  @extend %bg_position;
+
+  @include bg_img_sideRight(segundaSeccion);
 }
 .terceraSeccion__bg_images {
     @extend %bg_position;
@@ -30,11 +30,50 @@
     
     @include bg_img_sideRight(sextaSeccion);
 }
-/* --------- FIN IMAGENES DE FONDO INDEX.HTML--------- */
 
+/* --------- IMAGENES DE FONDO NFT.HTML--------- */
+
+.main-NFT__bg_images {
+    @extend %bg_position;
+    
+    @include bg_img_sideLeft(main-NFT);
+}
+
+/* --------- IMAGENES DE FONDO BLOCKCHAIN.HTML--------- */
 .main-blockchain__bg_images {
     @extend %bg_position;
     max-width: 1200px;
     
     @include bg_img_sideLeft(main-blockchain);
+}
+
+/* --------- IMAGENES DE FONDO PLAY_TO_EARN.HTML--------- */
+.main-PlayToEarn__bg_images {
+    @extend %bg_position;
+    max-width: 1200px;
+    
+    @include bg_img_sideLeft(main-PlayToEarn);
+}
+
+
+/* --------- IMAGENES DE FONDO JUEGOS.HTML--------- */
+.main-Juegos__bg_images {
+    @extend %bg_position;
+    
+    @include bg_img_sideLeft(main-Juegos);
+}
+
+/* --------- IMAGENES DE FONDO RENTABILIDAD.HTML--------- */
+.main-Rentabilidad__bg_images {
+    @extend %bg_position;
+    
+    @include bg_img_sideLeft(main-Rentabilidad);
+}
+
+/* --------- IMAGENES DE FONDO RENTABILIDAD.HTML--------- */
+.main-Newsletter__bg_images {
+    @extend %bg_position;
+    max-width: 1200px;
+    
+    @include bg_img_sideLeft(main-Newsletter);
 }
