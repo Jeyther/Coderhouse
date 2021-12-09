@@ -73,7 +73,13 @@
 /* --------- IMAGENES DE FONDO RENTABILIDAD.HTML--------- */
 .main-Newsletter__bg_images {
     @extend %bg_position;
-    max-width: 1200px;
     
     @include bg_img_sideLeft(main-Newsletter);
+}
+
+/* --------- IMAGENES DE FONDO RENTABILIDAD.HTML--------- */
+.main-404__bg_images {
+    @extend %bg_position;
+    
+    @include bg_img_sideLeft(main-404);
 }
