@@ -1,0 +1,15 @@
+#Dentro de GitIgnore armo una lista de objetos a ignorar
+
+#Ignora archivos
+.DS_store
+package-lock.json
+
+#Ignorar Capetas
+node_modules
+
+#ignorar todos los archivos con la misma extensión
+
+.txt 
+
+*.git
+
