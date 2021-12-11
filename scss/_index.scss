@@ -343,8 +343,25 @@ $colores-tarjetas:(
 
 @each $tarjeta, $color in $colores-tarjetas {
   .carrusel__tarjeta__#{$tarjeta} {
-      background-color: $color;
-      box-shadow: 0 0 30px $color;
+    background-color: $color;
+    box-shadow: 0 0 30px $color;
+
+    animation: breath__#{$tarjeta};
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+
+    /* ----- EFECTO DE RESPIRACION (CARRUSEL) -----  */
+    @keyframes breath__#{$tarjeta} {
+      from {
+        box-shadow: 0 0 30px $color;
+      } /* Opacidad al comienzo de la animación */
+      50% {
+        box-shadow: 0 0 20px $color;
+      } /* Opacidad al 50% de animación */
+      to {
+        box-shadow: 0 0 30px $color;
+      } /* Opacidad al final de la animación */
+    }
   }
 }
 /* ----- FIN ASIGNAR COLORES CON MAP Y EACH -----  */
