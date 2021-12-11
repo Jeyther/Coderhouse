@@ -140,7 +140,23 @@
   @media (max-width: 375px) {
     .main-404{
 
-        gap: 60px;
+        gap: 120px;
 
+    }
+
+    .error404__lupa {
+      width: 120px;
+      right: 30px;
+      top: 110px;
+    
+    }
+
+    @keyframes girar {
+      from {
+        transform: rotate(0deg) translate(-20px) rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg) translate(-20px) rotate(-360deg);
+      }
     }
   }
