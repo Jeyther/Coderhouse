@@ -9,6 +9,12 @@
 
 $bg-degradado: enable;
 
+html{
+
+  scroll-behavior: smooth;
+
+}
+
 /* Eliminar margen en toda la pagina */
 * {
   margin: 0;

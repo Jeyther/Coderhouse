@@ -20,6 +20,7 @@
 
   gap: 20px;
 }
+
 .quintaSeccion {
   @include alinear(center);
 }
@@ -58,7 +59,7 @@
 .terceraSeccion__texto__titulo,
 .cuartaSeccion__texto__titulo,
 .quintaSeccion__texto__titulo,
-.sextaSeccion__texto__titulo{
+.sextaSeccion__texto__titulo {
   font-family: var(--Rubik);
   color: var(--blanco);
   line-height: 80px;
@@ -93,6 +94,7 @@
     word-spacing: -40px;
   }
 }
+
 .segundaSeccion__texto__titulo {
   .grande {
     letter-spacing: -25px;
@@ -105,6 +107,7 @@
     letter-spacing: -5px;
   }
 }
+
 .sextaSeccion__texto__titulo {
   .grande {
     font-size: 65px;
@@ -187,6 +190,7 @@
 
   margin-top: 30px;
 }
+
 /* animacion de flotar */
 @keyframes flotar-label {
   0% {
@@ -201,6 +205,7 @@
     bottom: 130px;
   }
 }
+
 /* BOTONES */
 
 /* margen, padding, display */
@@ -220,6 +225,62 @@
 
   background: linear-gradient(91.54deg, #ffb31e 2.78%, #ffe653 104.38%);
   border-radius: 47px;
+
+  position: relative;
+
+  /*EFECTO DEL BOTON*/
+
+  &:link {
+
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 100px;
+    transition: all .2s;
+
+    &:visited {
+
+      position: absolute;
+
+    }
+
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-width: 3px;
+    border-style: solid;
+    border-color: white;
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+  }
+
+  &::after {
+    background-color: #fff;
+  }
+
 }
 
 /* color y texto del boton*/
@@ -313,35 +374,33 @@
 
 /* ----- RUIDO DE FONDO -----  */
 .ruido {
-  
+
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  
+  width: 100%;
+  height: 100%;
+
   background-image: url(../img/noise.gif);
   background-size: auto;
   background-repeat: repeat;
   opacity: .04;
   z-index: -1;
 }
+
 /* ----- FIN RUIDO DE FONDO -----  */
 
 
 /* ----- ASIGNAR COLORES CON MAP Y EACH -----  */
-$colores-tarjetas:(
-
-  pvu: #dc7ae9,
+$colores-tarjetas:(pvu: #dc7ae9,
   axie: #44b9ed,
   ctf:#ffb31e,
   bfc: #21b5b0,
   ccw: #f60201,
-  cm: #9fa8da
+  cm: #9fa8da);
 
-);
-
-@each $tarjeta, $color in $colores-tarjetas {
+@each $tarjeta,
+$color in $colores-tarjetas {
   .carrusel__tarjeta__#{$tarjeta} {
     background-color: $color;
     box-shadow: 0 0 30px $color;
@@ -354,16 +413,23 @@ $colores-tarjetas:(
     @keyframes breath__#{$tarjeta} {
       from {
         box-shadow: 0 0 30px $color;
-      } /* Opacidad al comienzo de la animación */
+      }
+
+      /* Opacidad al comienzo de la animación */
       50% {
         box-shadow: 0 0 20px $color;
-      } /* Opacidad al 50% de animación */
+      }
+
+      /* Opacidad al 50% de animación */
       to {
         box-shadow: 0 0 30px $color;
-      } /* Opacidad al final de la animación */
+      }
+
+      /* Opacidad al final de la animación */
     }
   }
 }
+
 /* ----- FIN ASIGNAR COLORES CON MAP Y EACH -----  */
 
 /* --- IAMGENES ---  */
@@ -1299,6 +1365,7 @@ $colores-tarjetas:(
 
 /* --- pantallas Laptops (1024px) --- */
 @media (max-width: 1024px) {
+
   /* --- Tamaño secciones */
   .main,
   .segundaSeccion,
@@ -1313,6 +1380,7 @@ $colores-tarjetas:(
 
   .main__texto__titulo {
     margin-bottom: 0px;
+
     .grande {
       font-size: 60px;
       letter-spacing: -5px;
@@ -1341,19 +1409,23 @@ $colores-tarjetas:(
       line-height: 1;
     }
   }
+
   .quintaSeccion__texto__titulo {
     margin-bottom: 0;
+
     .grande {
       font-size: 100px;
       line-height: 1;
     }
   }
+
   .sextaSeccion__texto__titulo {
     .grande {
       font-size: 52px;
       line-height: 1;
     }
   }
+
   /* --- Cambiar color/tamaño de titulo pequeño --- */
 
   .segundaSeccion__texto__titulo .pequeño,
@@ -1405,10 +1477,12 @@ $colores-tarjetas:(
     margin: 25px;
   }
 }
+
 /* --- FIN pantallas Laptops --- */
 
 /* --- pantallas Tablets (768px) --- */
 @media (max-width: 768px) {
+
   /* --- Tamaño secciones */
   .main,
   .segundaSeccion,
@@ -1421,6 +1495,7 @@ $colores-tarjetas:(
 
     margin: 80px 30px;
   }
+
   .main {
     margin-top: 150px;
   }
@@ -1486,10 +1561,12 @@ $colores-tarjetas:(
     margin: 25px;
   }
 }
+
 /* --- FIN pantallas Tablets --- */
 
 /* --- pantalla smartphones (375px) --- */
 @media (max-width: 375px) {
+
   /* --- Tamaño secciones --- */
   .main,
   .segundaSeccion,
@@ -1581,6 +1658,7 @@ $colores-tarjetas:(
       word-spacing: -10px;
     }
   }
+
   /* --- TAMAÑO DE LABELS --- */
 
   .segundaSeccion__label {
@@ -1593,6 +1671,15 @@ $colores-tarjetas:(
   .sextaSeccion__label {
     font-size: 18px;
   }
+
+  /* --- CARRUSEL --- */
+
+  .carrusel {
+
+    justify-content: center;
+
+  }
+
 
   /* --- Animacion de Flotar --- */
   @keyframes flotar-label {
@@ -1609,4 +1696,5 @@ $colores-tarjetas:(
     }
   }
 }
+
 /* --- FIN pantalla smartphones --- */

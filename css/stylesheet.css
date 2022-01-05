@@ -7829,7 +7829,7 @@ textarea.form-control-lg {
   flex-direction: column; }
 
 .main__bg_images, .segundaSeccion__bg_images, .terceraSeccion__bg_images, .cuartaSeccion__bg_images, .quintaSeccion__bg_images, .sextaSeccion__bg_images, .main-NFT__bg_images, .main-blockchain__bg_images, .main-PlayToEarn__bg_images, .main-Juegos__bg_images, .main-Rentabilidad__bg_images, .main-Newsletter__bg_images, .main-404__bg_images {
-  width: 100%;
+  width: 95%;
   height: 100%;
   position: absolute;
   z-index: -1; }
@@ -7841,6 +7841,9 @@ textarea.form-control-lg {
   --blanco: #fff;
   --negro: #000;
   --naranja: #ffb31e; }
+
+html {
+  scroll-behavior: smooth; }
 
 /* Eliminar margen en toda la pagina */
 * {
@@ -8041,7 +8044,76 @@ p {
   width: 200px;
   padding: 10px 10px;
   background: linear-gradient(91.54deg, #ffb31e 2.78%, #ffe653 104.38%);
-  border-radius: 47px; }
+  border-radius: 47px;
+  position: relative;
+  /*EFECTO DEL BOTON*/ }
+  .main__boton:link,
+  .segundaSeccion__boton:link,
+  .terceraSeccion__boton:link,
+  .cuartaSeccion__boton:link,
+  .quintaSeccion__boton:link,
+  .sextaSeccion__boton:link {
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 100px;
+    transition: all .2s; }
+    .main__boton:link:visited,
+    .segundaSeccion__boton:link:visited,
+    .terceraSeccion__boton:link:visited,
+    .cuartaSeccion__boton:link:visited,
+    .quintaSeccion__boton:link:visited,
+    .sextaSeccion__boton:link:visited {
+      position: absolute; }
+  .main__boton:hover,
+  .segundaSeccion__boton:hover,
+  .terceraSeccion__boton:hover,
+  .cuartaSeccion__boton:hover,
+  .quintaSeccion__boton:hover,
+  .sextaSeccion__boton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-width: 3px;
+    border-style: solid;
+    border-color: white; }
+    .main__boton:hover::after,
+    .segundaSeccion__boton:hover::after,
+    .terceraSeccion__boton:hover::after,
+    .cuartaSeccion__boton:hover::after,
+    .quintaSeccion__boton:hover::after,
+    .sextaSeccion__boton:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0; }
+  .main__boton:active,
+  .segundaSeccion__boton:active,
+  .terceraSeccion__boton:active,
+  .cuartaSeccion__boton:active,
+  .quintaSeccion__boton:active,
+  .sextaSeccion__boton:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
+  .main__boton::after,
+  .segundaSeccion__boton::after,
+  .terceraSeccion__boton::after,
+  .cuartaSeccion__boton::after,
+  .quintaSeccion__boton::after,
+  .sextaSeccion__boton::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s; }
+  .main__boton::after,
+  .segundaSeccion__boton::after,
+  .terceraSeccion__boton::after,
+  .cuartaSeccion__boton::after,
+  .quintaSeccion__boton::after,
+  .sextaSeccion__boton::after {
+    background-color: #fff; }
 
 /* color y texto del boton*/
 .main__boton__texto,
@@ -8118,8 +8190,8 @@ p {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-image: url(../img/noise.gif);
   background-size: auto;
   background-repeat: repeat;
@@ -8130,27 +8202,117 @@ p {
 /* ----- ASIGNAR COLORES CON MAP Y EACH -----  */
 .carrusel__tarjeta__pvu {
   background-color: #dc7ae9;
-  box-shadow: 0 0 30px #dc7ae9; }
+  box-shadow: 0 0 30px #dc7ae9;
+  animation: breath__pvu;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  /* ----- EFECTO DE RESPIRACION (CARRUSEL) -----  */ }
+
+@keyframes breath__pvu {
+  from {
+    box-shadow: 0 0 30px #dc7ae9; }
+  /* Opacidad al comienzo de la animación */
+  50% {
+    box-shadow: 0 0 20px #dc7ae9; }
+  /* Opacidad al 50% de animación */
+  to {
+    box-shadow: 0 0 30px #dc7ae9; }
+  /* Opacidad al final de la animación */ }
 
 .carrusel__tarjeta__axie {
   background-color: #44b9ed;
-  box-shadow: 0 0 30px #44b9ed; }
+  box-shadow: 0 0 30px #44b9ed;
+  animation: breath__axie;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  /* ----- EFECTO DE RESPIRACION (CARRUSEL) -----  */ }
+
+@keyframes breath__axie {
+  from {
+    box-shadow: 0 0 30px #44b9ed; }
+  /* Opacidad al comienzo de la animación */
+  50% {
+    box-shadow: 0 0 20px #44b9ed; }
+  /* Opacidad al 50% de animación */
+  to {
+    box-shadow: 0 0 30px #44b9ed; }
+  /* Opacidad al final de la animación */ }
 
 .carrusel__tarjeta__ctf {
   background-color: #ffb31e;
-  box-shadow: 0 0 30px #ffb31e; }
+  box-shadow: 0 0 30px #ffb31e;
+  animation: breath__ctf;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  /* ----- EFECTO DE RESPIRACION (CARRUSEL) -----  */ }
+
+@keyframes breath__ctf {
+  from {
+    box-shadow: 0 0 30px #ffb31e; }
+  /* Opacidad al comienzo de la animación */
+  50% {
+    box-shadow: 0 0 20px #ffb31e; }
+  /* Opacidad al 50% de animación */
+  to {
+    box-shadow: 0 0 30px #ffb31e; }
+  /* Opacidad al final de la animación */ }
 
 .carrusel__tarjeta__bfc {
   background-color: #21b5b0;
-  box-shadow: 0 0 30px #21b5b0; }
+  box-shadow: 0 0 30px #21b5b0;
+  animation: breath__bfc;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  /* ----- EFECTO DE RESPIRACION (CARRUSEL) -----  */ }
+
+@keyframes breath__bfc {
+  from {
+    box-shadow: 0 0 30px #21b5b0; }
+  /* Opacidad al comienzo de la animación */
+  50% {
+    box-shadow: 0 0 20px #21b5b0; }
+  /* Opacidad al 50% de animación */
+  to {
+    box-shadow: 0 0 30px #21b5b0; }
+  /* Opacidad al final de la animación */ }
 
 .carrusel__tarjeta__ccw {
   background-color: #f60201;
-  box-shadow: 0 0 30px #f60201; }
+  box-shadow: 0 0 30px #f60201;
+  animation: breath__ccw;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  /* ----- EFECTO DE RESPIRACION (CARRUSEL) -----  */ }
+
+@keyframes breath__ccw {
+  from {
+    box-shadow: 0 0 30px #f60201; }
+  /* Opacidad al comienzo de la animación */
+  50% {
+    box-shadow: 0 0 20px #f60201; }
+  /* Opacidad al 50% de animación */
+  to {
+    box-shadow: 0 0 30px #f60201; }
+  /* Opacidad al final de la animación */ }
 
 .carrusel__tarjeta__cm {
   background-color: #9fa8da;
-  box-shadow: 0 0 30px #9fa8da; }
+  box-shadow: 0 0 30px #9fa8da;
+  animation: breath__cm;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  /* ----- EFECTO DE RESPIRACION (CARRUSEL) -----  */ }
+
+@keyframes breath__cm {
+  from {
+    box-shadow: 0 0 30px #9fa8da; }
+  /* Opacidad al comienzo de la animación */
+  50% {
+    box-shadow: 0 0 20px #9fa8da; }
+  /* Opacidad al 50% de animación */
+  to {
+    box-shadow: 0 0 30px #9fa8da; }
+  /* Opacidad al final de la animación */ }
 
 /* ----- FIN ASIGNAR COLORES CON MAP Y EACH -----  */
 /* --- IAMGENES ---  */
@@ -8901,6 +9063,9 @@ p {
     left: 0; }
   .sextaSeccion__label {
     font-size: 18px; }
+  /* --- CARRUSEL --- */
+  .carrusel {
+    justify-content: center; }
   /* --- Animacion de Flotar --- */
   @keyframes flotar-label {
     0% {
@@ -9065,18 +9230,6 @@ p {
   width: 200px; }
 
 /* ----- RUIDO DE FONDO -----  */
-.ruido {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-image: url(../img/noise.gif);
-  background-size: auto;
-  background-repeat: repeat;
-  opacity: 0.04;
-  z-index: -1; }
-
 /* ----- FIN RUIDO DE FONDO -----  */
 /* ------ Responsive Pagina NFT ------ */
 /* --- pantallas Laptops (1024px) --- */
@@ -9666,18 +9819,6 @@ p {
 
 /* ------ FIN ANIMACION DE SLIDE CON EACH Y LIST ------ */
 /* ----- RUIDO DE FONDO -----  */
-.ruido {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-image: url(../img/noise.gif);
-  background-size: auto;
-  background-repeat: repeat;
-  opacity: 0.04;
-  z-index: -1; }
-
 /* ----- FIN RUIDO DE FONDO -----  */
 /* ------ Responsive Pagina PLAY TO EARN ------ */
 /* --- pantallas Laptops (1024px) --- */
@@ -10260,7 +10401,16 @@ p {
 /*  --- RESPONSIVE (375px) --- */
 @media (max-width: 375px) {
   .main-404 {
-    gap: 60px; } }
+    gap: 120px; }
+  .error404__lupa {
+    width: 120px;
+    right: 30px;
+    top: 110px; }
+  @keyframes girar {
+    from {
+      transform: rotate(0deg) translate(-20px) rotate(0deg); }
+    to {
+      transform: rotate(360deg) translate(-20px) rotate(-360deg); } } }
 
 /* --------- IMAGENES DE FONDO INDEX.HTML--------- */
 .main__bg_images {
@@ -10396,9 +10546,11 @@ p {
       width: 600px; } }
   @media (max-width: 768px) {
     .quintaSeccion__bg_images .quintaSeccion__bg_images_fondo {
-      left: 75px; }
+      left: 75px;
+      width: 500px; }
     .quintaSeccion__bg_images .quintaSeccion__bg_images_1 {
-      left: 175px; } }
+      left: 175px;
+      width: 500px; } }
   @media (max-width: 375px) {
     .quintaSeccion__bg_images .quintaSeccion__bg_images_fondo {
       left: 0px;

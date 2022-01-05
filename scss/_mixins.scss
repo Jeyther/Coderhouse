@@ -108,9 +108,11 @@
   @media (max-width: 768px) {
     .#{$class}__bg_images_fondo {
       left: 75px;
+      width: 500px;
     }
     .#{$class}__bg_images_1 {
       left: 175px;
+      width: 500px;
     }
   }
 

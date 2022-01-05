@@ -32,21 +32,25 @@
   gap: 50px;
 
   margin-right: 25px;
-
+/* --- EFECTO SUBRAYADO --- */
   li {
     list-style: none;
     font-weight: 600;
     font-size: 18px;
+
     a {
       text-transform: uppercase;
       letter-spacing: 1px;
       position: relative;
+
       &:hover {
         color: var(--naranja);
+
         &::before {
           transform: scaleX(1);
         }
       }
+
       &::before {
         content: "";
         position: absolute;
@@ -77,11 +81,13 @@
 
   .header__menu__botones {
     gap: 20px;
+
     li {
       font-size: 16px;
     }
   }
 }
+
 /* --- pantallas Laptops (768px) --- */
 @media (max-width: 768px) {
   .header {
@@ -93,6 +99,7 @@
     width: 720px;
   }
 }
+
 /* --- pantallas Laptops (375px) --- */
 @media (max-width: 375px) {
   .header {
@@ -110,6 +117,7 @@
     margin-right: 0;
     margin-bottom: 10px;
     gap: 5px;
+
     li {
       font-size: 22px;
     }
