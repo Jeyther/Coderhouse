@@ -18,7 +18,7 @@ Puedes ver el proceso del proyecto:
 ## Run project
 Solo clonar el proyecto y configurar la base de datos en tu maquina local.
 
-**demás páginas del proyecto:
+**demás páginas del proyecto:**
 * [NFT](https://nft-criptojuegos.netlify.app/NFT.html)
 * [Blockchain](https://nft-criptojuegos.netlify.app/blockchain.html)
 * [Play to Earn](https://nft-criptojuegos.netlify.app/play_to_earn.html)
